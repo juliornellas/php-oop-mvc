@@ -212,6 +212,26 @@ include 'includes/autoloader.inc.php';
         </form>
     </div>
 
+    <hr>
+
+    <!-- AULA 09 -->
+    <div>
+        <h3>Aula 09 - Scope resolution operator ::</h3>
+        <p>Criados arquivos <em>first</em> e <em>second</em>.class.php</p>
+
+        <?php
+        $firstClass = new FirstClass;
+
+        //Acessar constante e método
+        echo "CONSTANTE: ".$firstClass::EXAMPLE."<br/>";
+        echo "METODO: ".$firstClass::test();
+        echo "<br><br>SECOND CLASS<br>";
+        $secondClass = new SecondClass;
+        echo "PROPRIEDADE ESTÁTICA: ".$secondClass::$staticProperty."<br>";
+        echo $secondClass::anotherTest();
+        ?>
+    </div>
+
 
 
     
