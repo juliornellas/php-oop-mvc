@@ -1,6 +1,9 @@
 <?php
-// include './includes/05.inc.php';
+//Aula 07 - Type declaration. 0 = false, 1 = true
+//Garante que ao enviar os dados seja no padrão definido na função de recebimento da classe
+declare(strict_types = 1);
 
+// include './includes/05.inc.php';
 
 // //Aula 06 Load classes
 // spl_autoload_register('myLoadClasses');
@@ -27,6 +30,7 @@ include 'includes/autoloader.inc.php';
 <body>
     <h1>PHP with OOP and MVC</h1>
 
+    <!-- AULA 01 -->
     <div>
         <h3>Aula 01 - Newclass.inc.php</h3>
         <p>Criando Objeto simples e vazio. Acessando diretamente o arquivo e efetuando o <em>var_dump</em> para verificar que de fato temos um objeto criado.</p>
@@ -34,6 +38,7 @@ include 'includes/autoloader.inc.php';
 
     <hr>
 
+    <!-- AULA 02 -->
     <div>
         <h3>Aula 02 - person.inc.php</h3>
         <p>Visibility and Inheritance</p>
@@ -64,6 +69,7 @@ include 'includes/autoloader.inc.php';
 
     <hr>
 
+    <!-- AULA 03 -->
     <div>
         <h3>Aula 03 - Propriedades e Métodos</h3>
         <?php
@@ -89,6 +95,7 @@ include 'includes/autoloader.inc.php';
 
     <hr>
 
+    <!-- AULA 04 -->
     <div>
         <h3>Aula 04 -  Constructors and Destructors</h3>
         <p>Definindo tb o tipo da variavel e deletando o objeto</p>
@@ -111,6 +118,7 @@ include 'includes/autoloader.inc.php';
 
     <hr>
 
+    <!-- AULA 05 -->
     <div>
         <h3>Aula 05 - Static Properties and Methods</h3>
         <p>Acessando e manipulando, sem instanciar um objeto</p>
@@ -149,6 +157,7 @@ include 'includes/autoloader.inc.php';
 
     <hr>
 
+    <!-- AULA 06 -->
     <div>
         <h3>Aula 06 - Load Classes Automatically</h3>
         <p>Criação da pasta <strong>classes</strong> para exemplificar o carregamento automatico das classes no topo do arquivo.</p>
@@ -157,13 +166,50 @@ include 'includes/autoloader.inc.php';
         <p>Criado pasta <em>Person</em>, movida classe categorizada para pasta</p>
         <?php 
         
-        $person =  new People\Person("Tiradentes", 45);
-        // $person =  new Person("Tiradentes", 45);
-        echo $person->getPerson()."<br>";
+        // $person =  new People\Person("Tiradentes", 45);
+        // // $person =  new Person("Tiradentes", 45);
+        // echo $person->getPerson()."<br>";
 
-        $house = new House("Rua do Sambaqui", 13);
-        echo $house->getAddress();
+        // $house = new House("Rua do Sambaqui", 13);
+        // echo $house->getAddress();
+
         ?>
+    </div>
+
+    <hr>
+
+    <!-- AULA 07 -->
+    <div>
+        <h3>Aula 07 - Type declaration</h3>
+        <p>Define o padrão obrigatório de dados a serem aceitos pelas classes</p>
+
+        <?php
+        // $person =  new People\Person("Tiradentes", 45);
+        // $person->setName("José");
+        // $person->setAge(39);
+        // echo $person->getPerson()."<br>";
+        ?>
+    </div>
+
+    <hr>
+
+    <!-- AULA 08 -->
+    <div>
+        <h3>Aula 08 - Calculadora</h3>
+        <p>Criação do arquivo <em>calc.class.php e inc.php</em> e novo autoloader.</p>
+
+        <form action="includes/calc.inc.php" method="post">
+            <p>Minha calculadora</p>
+            <input type="number" name="num1" placeholder="Primeiro número" />
+            <select name="operator">
+                <option value="sum">+</option>
+                <option value="sub">-</option>
+                <option value="div">/</option>
+                <option value="mul">*</option>
+            </select>
+            <input type="number" name="num2" placeholder="Segundo Número">
+            <button type="submit" name="submit">Calcular</button>
+        </form>
     </div>
 
 
