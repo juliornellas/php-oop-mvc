@@ -18,6 +18,7 @@ declare(strict_types = 1);
 //Criado arquivo a parte (em INCLUDES) para carregar esse código do AUTOLOAD
 include 'includes/autoloader.inc.php';
 
+//Aula 11
 include_once 'abstract/PaymentType.abstract.php';
 
 ?>
@@ -242,14 +243,27 @@ include_once 'abstract/PaymentType.abstract.php';
         <p>includes/interfaces.inc.php</p>
     </div>
 
+    <hr>
+
     <!-- AULA 11 -->
     <div>
         <h3>Aula 11 - Abstract Classes</h3>
         <p>abstract/PaymentTypes.abstract.php</p>
         <p>classes/BuyProduct.class.php</p>
         <?php
-            $buyProduct = new BuyProduct();
-            echo $buyProduct->getPayment();
+            // $buyProduct = new BuyProduct();
+            // echo $buyProduct->getPayment();
+        ?>
+    </div>
+
+    <hr>
+
+    <!-- AULA 12 -->
+    <div>
+        <h3>Aula 12 - Anonymous Classes</h3>
+        <p>Criado Classe Simple Class</p>
+        <?php
+            $obj = 
         ?>
     </div>
 
