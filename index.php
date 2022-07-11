@@ -220,16 +220,23 @@ include 'includes/autoloader.inc.php';
         <p>Criados arquivos <em>first</em> e <em>second</em>.class.php</p>
 
         <?php
-        $firstClass = new FirstClass;
+        // $firstClass = new FirstClass;
 
-        //Acessar constante e método
-        echo "CONSTANTE: ".$firstClass::EXAMPLE."<br/>";
-        echo "METODO: ".$firstClass::test();
-        echo "<br><br>SECOND CLASS<br>";
-        $secondClass = new SecondClass;
-        echo "PROPRIEDADE ESTÁTICA: ".$secondClass::$staticProperty."<br>";
-        echo $secondClass::anotherTest();
+        // //Acessar constante e método
+        // echo "CONSTANTE: ".$firstClass::EXAMPLE."<br/>";
+        // echo "METODO: ".$firstClass::test();
+        // echo "<br><br>SECOND CLASS<br>";
+        // $secondClass = new SecondClass;
+        // echo "PROPRIEDADE ESTÁTICA: ".$secondClass::$staticProperty."<br>";
+        // echo $secondClass::anotherTest();
         ?>
+    </div>
+
+    <hr>
+
+    <!-- AULA 10 -->
+    <div>
+        <h3>Aula 10 - Interfaces</h3>
     </div>
 
 
