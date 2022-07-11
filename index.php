@@ -18,6 +18,8 @@ declare(strict_types = 1);
 //Criado arquivo a parte (em INCLUDES) para carregar esse código do AUTOLOAD
 include 'includes/autoloader.inc.php';
 
+include_once 'abstract/PaymentType.abstract.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -238,6 +240,17 @@ include 'includes/autoloader.inc.php';
     <div>
         <h3>Aula 10 - Interfaces</h3>
         <p>includes/interfaces.inc.php</p>
+    </div>
+
+    <!-- AULA 11 -->
+    <div>
+        <h3>Aula 11 - Abstract Classes</h3>
+        <p>abstract/PaymentTypes.abstract.php</p>
+        <p>classes/BuyProduct.class.php</p>
+        <?php
+            $buyProduct = new BuyProduct();
+            echo $buyProduct->getPayment();
+        ?>
     </div>
 
 
