@@ -18,6 +18,9 @@ declare(strict_types = 1);
 //Criado arquivo a parte (em INCLUDES) para carregar esse código do AUTOLOAD
 include 'includes/autoloader.inc.php';
 
+//Aula 10
+include_once 'includes/interfaces.inc.php';
+
 //Aula 11
 include_once 'abstract/PaymentType.abstract.php';
 
@@ -241,6 +244,15 @@ include_once 'abstract/PaymentType.abstract.php';
     <div>
         <h3>Aula 10 - Interfaces</h3>
         <p>includes/interfaces.inc.php</p>
+        <?php
+            //
+            $buyProduct = new BuyProduct;
+            // $paymentType = new Cash;
+            // $paymentType = new Paypal;
+            $paymentType = new BankTransfer;
+            // $buyProduct->pay($paymentType);
+            $buyProduct->onlinePay($paymentType);
+        ?>
     </div>
 
     <hr>
@@ -263,7 +275,22 @@ include_once 'abstract/PaymentType.abstract.php';
         <h3>Aula 12 - Anonymous Classes</h3>
         <p>Criado Classe Simple Class</p>
         <?php
-            $obj = 
+            // $obj = new SimpleClass;
+            // $obj->helloWorld();
+
+            // echo "<br>";
+
+            // //Anonymous Class
+            // //Mais utilizado qd vc vai utilizar apenas 1vez não precisa carregar nenhum arquivo externo. Por conta disso, utiliza menos memória e processamento.
+            // //Exatamente igual a uma Class regular
+            // //Obs.:Não existirá em nenhum local a não ser na variavel que foi associada
+            // $newObj = new class(){// Escrever COM ou SEM () depende se vc terá um __construct na classe
+            //     public function helloWorld(){
+            //         echo "Hello World from Anonymous Class";
+            //     }
+            // };
+
+            // $newObj->helloWorld();
         ?>
     </div>
 
