@@ -12,8 +12,12 @@ abstract class Grants {
     protected function grants(){
         echo "<br>Grants for all";
     }
+    protected function address(){
+        echo "<br>Address verified";
+    }
 
     abstract public function paymentProcess();
+    abstract public function checkAddress();
 }
 
 class Paypal extends Grants implements PaymentInterface, LoginInterface {
@@ -23,8 +27,12 @@ class Paypal extends Grants implements PaymentInterface, LoginInterface {
     public function payNow(){
         echo "<br>paynow paypal";
     }
+    public function checkAddress(){
+        $this->address();
+    }
     public function paymentProcess(){
         echo "<br>paymentProcess PAYPAL";
+        $this->checkAddress();
         $this->grants();
         $this->loginFirst();
         $this->payNow();

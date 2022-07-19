@@ -19,283 +19,301 @@ declare(strict_types = 1);
 include 'includes/autoloader.inc.php';
 
 //Aula 10
-include_once 'includes/interfaces.inc.php';
+// include_once 'includes/interfaces.inc.php';
 
 //Aula 11
-include_once 'abstract/PaymentType.abstract.php';
+// include_once 'abstract/PaymentType.abstract.php';
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>PHP with OOP and MVC</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>PHP with OOP and MVC</h1>
 
-    <!-- AULA 01 -->
-    <div>
-        <h3>Aula 01 - Newclass.inc.php</h3>
-        <p>Criando Objeto simples e vazio. Acessando diretamente o arquivo e efetuando o <em>var_dump</em> para verificar que de fato temos um objeto criado.</p>
-    </div>
+        <!-- AULA 01 -->
+        <div>
+            <h3>Aula 01 - Newclass.inc.php</h3>
+            <p>Criando Objeto simples e vazio. Acessando diretamente o arquivo e efetuando o <em>var_dump</em> para verificar que de fato temos um objeto criado.</p>
+        </div>
 
-    <hr>
+        <hr>
 
-    <!-- AULA 02 -->
-    <div>
-        <h3>Aula 02 - person.inc.php</h3>
-        <p>Visibility and Inheritance</p>
-        <p>Switch between private, protected and public.</p>
-        <p>
-            <em>Obj Pet</em>:
+        <!-- AULA 02 -->
+        <div>
+            <h3>Aula 02 - person.inc.php</h3>
+            <p>Visibility and Inheritance</p>
+            <p>Switch between private, protected and public.</p>
+            <p>
+                <em>Obj Pet</em>:
+                <?php
+                    // $pet1 = new Pet;
+                    // echo $pet1->owner()
+                    // ."<br>".
+                    // // $pet1->lastName()
+                    // // $pet1->last;
+                    // $pet1->firstName()
+                    // ;
+                ?>
+                <br>
+        
+            </p>
+            <p>
+                <em>Obj Person</em>:
+                <?php
+                    // $person = new Person;
+                    // echo $person->first;
+                    // echo $person->getName();
+                ?>
+            </p>
+        </div>
+
+        <hr>
+
+        <!-- AULA 03 -->
+        <div>
+            <h3>Aula 03 - Propriedades e Métodos</h3>
             <?php
-                // $pet1 = new Pet;
-                // echo $pet1->owner()
-                // ."<br>".
-                // // $pet1->lastName()
-                // // $pet1->last;
-                // $pet1->firstName()
-                // ;
-            ?>
-            <br>
-    
-        </p>
-        <p>
-            <em>Obj Person</em>:
-            <?php
-                // $person = new Person;
-                // echo $person->first;
-                // echo $person->getName();
-            ?>
-        </p>
-    </div>
-
-    <hr>
-
-    <!-- AULA 03 -->
-    <div>
-        <h3>Aula 03 - Propriedades e Métodos</h3>
-        <?php
-        // $name1 = "Saci";
-        // $age1 = 33;
-        // $occupation1 = "Desempregado";
-
-        // $name2 = "Tiradentes";
-        // $age2 = 41;
-        // $occupation2 = "Dentista";
-
-        // $person1 = new Person;
-
-        // echo $person1->name. " - ";
-        // $person1->name = $name1;
-        // echo $person1->name;
-
-        // $person1->setName($name1);
-        // echo $person1->getName();
-
-        ?>
-    </div>
-
-    <hr>
-
-    <!-- AULA 04 -->
-    <div>
-        <h3>Aula 04 -  Constructors and Destructors</h3>
-        <p>Definindo tb o tipo da variavel e deletando o objeto</p>
-        <?php
             // $name1 = "Saci";
             // $age1 = 33;
             // $occupation1 = "Desempregado";
-            // $p1 = new Person($name1, $age1, $occupation1);
 
-            // // $p2 = new Person("Tiradentes", 41, "Dentista");
+            // $name2 = "Tiradentes";
+            // $age2 = 41;
+            // $occupation2 = "Dentista";
 
-            // echo "<pre>";
-            // var_dump($p1);
-            // echo "</pre>";
+            // $person1 = new Person;
 
-            // // Deletando objeto
-            // // unset($p1);
-        ?>
-    </div>
+            // echo $person1->name. " - ";
+            // $person1->name = $name1;
+            // echo $person1->name;
 
-    <hr>
+            // $person1->setName($name1);
+            // echo $person1->getName();
 
-    <!-- AULA 05 -->
-    <div>
-        <h3>Aula 05 - Static Properties and Methods</h3>
-        <p>Acessando e manipulando, sem instanciar um objeto</p>
-        <?php
-            // echo Person::$drinkingAge;
-            // echo "<br>";
-            // Person::setDrinkingAge(21);
-            // echo "<br>";
-            // echo Person::$drinkingAge;
-        ?>
-        <p>Acessando e manipulando num objeto instanciado</p>
-        <?php
-        // Person::newDrinkingAge(87);
+            ?>
+        </div>
 
-        //Classe 21
-        // Person::setDA(21);
-        // echo Person::getDA()."<br>";
+        <hr>
 
-        // $person = new Person('Mula Sem Cabeça', 18, "Desempregado");
-        // //Objeto pegou novo padrão
-        // echo $person->getDrinkingAge()."<br>";
+        <!-- AULA 04 -->
+        <div>
+            <h3>Aula 04 -  Constructors and Destructors</h3>
+            <p>Definindo tb o tipo da variavel e deletando o objeto</p>
+            <?php
+                // $name1 = "Saci";
+                // $age1 = 33;
+                // $occupation1 = "Desempregado";
+                // $p1 = new Person($name1, $age1, $occupation1);
 
-        // //Setando pela Classe = 71
-        // Person::setDA(71);
-        // echo $person->getDrinkingAge()."<br>";
+                // // $p2 = new Person("Tiradentes", 41, "Dentista");
 
-        // //Setando pelo Objeto = 33
-        // $person->setDrinkingAge(33);
-        // echo $person->getDrinkingAge()."<br>";
+                // echo "<pre>";
+                // var_dump($p1);
+                // echo "</pre>";
 
-        // //Consultando atarves da Classe ultimo valor atualizado
-        // echo Person::getDA()."<br>";
+                // // Deletando objeto
+                // // unset($p1);
+            ?>
+        </div>
 
-        ?>
-    </div>
+        <hr>
 
-    <hr>
+        <!-- AULA 05 -->
+        <div>
+            <h3>Aula 05 - Static Properties and Methods</h3>
+            <p>Acessando e manipulando, sem instanciar um objeto</p>
+            <?php
+                // echo Person::$drinkingAge;
+                // echo "<br>";
+                // Person::setDrinkingAge(21);
+                // echo "<br>";
+                // echo Person::$drinkingAge;
+            ?>
+            <p>Acessando e manipulando num objeto instanciado</p>
+            <?php
+            // Person::newDrinkingAge(87);
 
-    <!-- AULA 06 -->
-    <div>
-        <h3>Aula 06 - Load Classes Automatically</h3>
-        <p>Criação da pasta <strong>classes</strong> para exemplificar o carregamento automatico das classes no topo do arquivo.</p>
-        <h4>Criando um Namespace</h4>
-        <p>Forma de organizar as classes em categorias</p>
-        <p>Criado pasta <em>Person</em>, movida classe categorizada para pasta</p>
-        <?php 
+            //Classe 21
+            // Person::setDA(21);
+            // echo Person::getDA()."<br>";
+
+            // $person = new Person('Mula Sem Cabeça', 18, "Desempregado");
+            // //Objeto pegou novo padrão
+            // echo $person->getDrinkingAge()."<br>";
+
+            // //Setando pela Classe = 71
+            // Person::setDA(71);
+            // echo $person->getDrinkingAge()."<br>";
+
+            // //Setando pelo Objeto = 33
+            // $person->setDrinkingAge(33);
+            // echo $person->getDrinkingAge()."<br>";
+
+            // //Consultando atarves da Classe ultimo valor atualizado
+            // echo Person::getDA()."<br>";
+
+            ?>
+        </div>
+
+        <hr>
+
+        <!-- AULA 06 -->
+        <div>
+            <h3>Aula 06 - Load Classes Automatically</h3>
+            <p>Criação da pasta <strong>classes</strong> para exemplificar o carregamento automatico das classes no topo do arquivo.</p>
+            <h4>Criando um Namespace</h4>
+            <p>Forma de organizar as classes em categorias</p>
+            <p>Criado pasta <em>Person</em>, movida classe categorizada para pasta</p>
+            <?php 
+            
+            // $person =  new People\Person("Tiradentes", 45);
+            // // $person =  new Person("Tiradentes", 45);
+            // echo $person->getPerson()."<br>";
+
+            // $house = new House("Rua do Sambaqui", 13);
+            // echo $house->getAddress();
+
+            ?>
+        </div>
+
+        <hr>
+
+        <!-- AULA 07 -->
+        <div>
+            <h3>Aula 07 - Type declaration</h3>
+            <p>Define o padrão obrigatório de dados a serem aceitos pelas classes</p>
+
+            <?php
+            // $person =  new People\Person("Tiradentes", 45);
+            // $person->setName("José");
+            // $person->setAge(39);
+            // echo $person->getPerson()."<br>";
+            ?>
+        </div>
+
+        <hr>
+
+        <!-- AULA 08 -->
+        <div>
+            <h3>Aula 08 - Calculadora</h3>
+            <p>Criação do arquivo <em>calc.class.php e inc.php</em> e novo autoloader.</p>
+
+            <form action="includes/calc.inc.php" method="post">
+                <p>Minha calculadora</p>
+                <input type="number" name="num1" placeholder="Primeiro número" />
+                <select name="operator">
+                    <option value="sum">+</option>
+                    <option value="sub">-</option>
+                    <option value="div">/</option>
+                    <option value="mul">*</option>
+                </select>
+                <input type="number" name="num2" placeholder="Segundo Número">
+                <button type="submit" name="submit">Calcular</button>
+            </form>
+        </div>
+
+        <hr>
+
+        <!-- AULA 09 -->
+        <div>
+            <h3>Aula 09 - Scope resolution operator ::</h3>
+            <p>Criados arquivos <em>first</em> e <em>second</em>.class.php</p>
+
+            <?php
+            // $firstClass = new FirstClass;
+
+            // //Acessar constante e método
+            // echo "CONSTANTE: ".$firstClass::EXAMPLE."<br/>";
+            // echo "METODO: ".$firstClass::test();
+            // echo "<br><br>SECOND CLASS<br>";
+            // $secondClass = new SecondClass;
+            // echo "PROPRIEDADE ESTÁTICA: ".$secondClass::$staticProperty."<br>";
+            // echo $secondClass::anotherTest();
+            ?>
+        </div>
+
+        <hr>
+
+        <!-- AULA 10 -->
+        <div>
+            <h3>Aula 10 - Interfaces</h3>
+            <p>includes/interfaces.inc.php</p>
+            <?php
+                // $buyProduct = new BuyProduct;
+                // // $paymentType = new Cash;
+                // // $paymentType = new Paypal;
+                // $paymentType = new Paypal;
+                // $buyProduct->pay($paymentType);
+                // // $buyProduct->onlinePay($paymentType);
+            ?>
+        </div>
+
+        <hr>
+
+        <!-- AULA 11 -->
+        <div>
+            <h3>Aula 11 - Abstract Classes</h3>
+            <p>abstract/PaymentTypes.abstract.php</p>
+            <p>classes/BuyProduct.class.php</p>
+            <?php
+                // $buyProduct = new BuyProduct();
+                // echo $buyProduct->getPayment();
+            ?>
+        </div>
+
+        <hr>
+
+        <!-- AULA 12 -->
+        <div>
+            <h3>Aula 12 - Anonymous Classes</h3>
+            <p>Criado Classe Simple Class</p>
+            <?php
+                // $obj = new SimpleClass;
+                // $obj->helloWorld();
+
+                // echo "<br>";
+
+                // //Anonymous Class
+                // //Mais utilizado qd vc vai utilizar apenas 1vez não precisa carregar nenhum arquivo externo. Por conta disso, utiliza menos memória e processamento.
+                // //Exatamente igual a uma Class regular
+                // //Obs.:Não existirá em nenhum local a não ser na variavel que foi associada
+                // $newObj = new class(){// Escrever COM ou SEM () depende se vc terá um __construct na classe
+                //     public function helloWorld(){
+                //         echo "Hello World from Anonymous Class";
+                //     }
+                // };
+
+                // $newObj->helloWorld();
+            ?>
+        </div>
+
+        <hr>
+
+        <!-- AULA 13 -->
+        <div>
+            <h3>Connect to a database using PDO</h3>
+            <p>dbh.class.php</p>
+            <?php
+                $usersObj = new User();
+                $usersObj->getUsers();
+            ?>
+        </div>
+
+        <hr>
+
+        <!-- AULA 14 -->
+        <div>
+            <h3></h3>
+        </div>
+
+
+
         
-        // $person =  new People\Person("Tiradentes", 45);
-        // // $person =  new Person("Tiradentes", 45);
-        // echo $person->getPerson()."<br>";
-
-        // $house = new House("Rua do Sambaqui", 13);
-        // echo $house->getAddress();
-
-        ?>
-    </div>
-
-    <hr>
-
-    <!-- AULA 07 -->
-    <div>
-        <h3>Aula 07 - Type declaration</h3>
-        <p>Define o padrão obrigatório de dados a serem aceitos pelas classes</p>
-
-        <?php
-        // $person =  new People\Person("Tiradentes", 45);
-        // $person->setName("José");
-        // $person->setAge(39);
-        // echo $person->getPerson()."<br>";
-        ?>
-    </div>
-
-    <hr>
-
-    <!-- AULA 08 -->
-    <div>
-        <h3>Aula 08 - Calculadora</h3>
-        <p>Criação do arquivo <em>calc.class.php e inc.php</em> e novo autoloader.</p>
-
-        <form action="includes/calc.inc.php" method="post">
-            <p>Minha calculadora</p>
-            <input type="number" name="num1" placeholder="Primeiro número" />
-            <select name="operator">
-                <option value="sum">+</option>
-                <option value="sub">-</option>
-                <option value="div">/</option>
-                <option value="mul">*</option>
-            </select>
-            <input type="number" name="num2" placeholder="Segundo Número">
-            <button type="submit" name="submit">Calcular</button>
-        </form>
-    </div>
-
-    <hr>
-
-    <!-- AULA 09 -->
-    <div>
-        <h3>Aula 09 - Scope resolution operator ::</h3>
-        <p>Criados arquivos <em>first</em> e <em>second</em>.class.php</p>
-
-        <?php
-        // $firstClass = new FirstClass;
-
-        // //Acessar constante e método
-        // echo "CONSTANTE: ".$firstClass::EXAMPLE."<br/>";
-        // echo "METODO: ".$firstClass::test();
-        // echo "<br><br>SECOND CLASS<br>";
-        // $secondClass = new SecondClass;
-        // echo "PROPRIEDADE ESTÁTICA: ".$secondClass::$staticProperty."<br>";
-        // echo $secondClass::anotherTest();
-        ?>
-    </div>
-
-    <hr>
-
-    <!-- AULA 10 -->
-    <div>
-        <h3>Aula 10 - Interfaces</h3>
-        <p>includes/interfaces.inc.php</p>
-        <?php
-            //
-            $buyProduct = new BuyProduct;
-            // $paymentType = new Cash;
-            // $paymentType = new Paypal;
-            $paymentType = new BankTransfer;
-            // $buyProduct->pay($paymentType);
-            $buyProduct->onlinePay($paymentType);
-        ?>
-    </div>
-
-    <hr>
-
-    <!-- AULA 11 -->
-    <div>
-        <h3>Aula 11 - Abstract Classes</h3>
-        <p>abstract/PaymentTypes.abstract.php</p>
-        <p>classes/BuyProduct.class.php</p>
-        <?php
-            // $buyProduct = new BuyProduct();
-            // echo $buyProduct->getPayment();
-        ?>
-    </div>
-
-    <hr>
-
-    <!-- AULA 12 -->
-    <div>
-        <h3>Aula 12 - Anonymous Classes</h3>
-        <p>Criado Classe Simple Class</p>
-        <?php
-            // $obj = new SimpleClass;
-            // $obj->helloWorld();
-
-            // echo "<br>";
-
-            // //Anonymous Class
-            // //Mais utilizado qd vc vai utilizar apenas 1vez não precisa carregar nenhum arquivo externo. Por conta disso, utiliza menos memória e processamento.
-            // //Exatamente igual a uma Class regular
-            // //Obs.:Não existirá em nenhum local a não ser na variavel que foi associada
-            // $newObj = new class(){// Escrever COM ou SEM () depende se vc terá um __construct na classe
-            //     public function helloWorld(){
-            //         echo "Hello World from Anonymous Class";
-            //     }
-            // };
-
-            // $newObj->helloWorld();
-        ?>
-    </div>
-
-
-
-    
-</body>
+    </body>
 </html>
