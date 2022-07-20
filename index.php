@@ -297,11 +297,11 @@ include 'includes/autoloader.inc.php';
 
         <!-- AULA 13 -->
         <div>
-            <h3>Connect to a database using PDO</h3>
-            <p>dbh.class.php</p>
+            <h3>Aula 13 - Connect to a database using PDO</h3>
+            <p>- dbh.class.php</p>
             <?php
-                $usersObj = new User();
-                $usersObj->getUsers();
+                // $conn = new Dbh();
+                // $conn->connect();
             ?>
         </div>
 
@@ -309,7 +309,31 @@ include 'includes/autoloader.inc.php';
 
         <!-- AULA 14 -->
         <div>
-            <h3></h3>
+            <h3>Aula 14 - CRUD</h3>
+            <p>- User.class.php</p>
+            <?php
+                $userObj = new User();
+                // $userObj->create("Maria","Emília", "1960-08-12"); //Create
+                // $userObj->create("Chico","Bento", "2014-06-05"); //Create
+
+                $userObj->all(); //Read
+
+                echo "<br /><br />";
+
+                // Usuário específico
+                $user = $userObj->getUser(5);
+                echo "<pre>";
+                var_dump($user);
+                echo "</pre>";
+                echo "
+                Ola, ".$user['users_firstname']." ".$user['users_lastname']."!
+                <br>
+                Sua data de nascimento é: ".$user['users_dateofbirth'];
+
+                // $userObj->updateLn(11, "Anísio"); //Update
+
+                // $userObj->delete(10); //Delete
+            ?>
         </div>
 
 
