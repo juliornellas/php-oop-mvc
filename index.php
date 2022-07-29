@@ -312,6 +312,7 @@ include 'includes/autoloader.inc.php';
             <h3>Aula 14 - CRUD</h3>
             <p>- User.class.php</p>
             <?php
+            echo 5 % 0.75;
                 $userObj = new User();
                 // $userObj->create("Maria","Emília", "1960-08-12"); //Create
                 // $userObj->create("Chico","Bento", "2014-06-05"); //Create
